@@ -3,7 +3,8 @@ import glob
 import pandas as pd
 from pandas.core.frame import DataFrame
 
-game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE')).sort()
+game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
+game_files.sort()
 
 game_frames = []
 for game_file in game_files:
