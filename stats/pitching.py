@@ -5,8 +5,8 @@ from pandas.core.frame import DataFrame
 
 from data import games
 
-plays = games.loc[games['type'] == 'play']
-strike_outs : DataFrame = plays.loc[plays['event'].str.contains('K')]
+plays = games[games['type'] == 'play']
+strike_outs = plays[plays['event'].str.contains('K')]
 print(strike_outs)
 print('********')
 strike_outs = strike_outs.groupby(['year', 'game_id']).size()
