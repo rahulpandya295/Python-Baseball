@@ -37,5 +37,5 @@ hits = hits.pivot(index='inning', columns='hit_type', values='count')
 
 print(hits)
 
-hits.plot(kind='bar', stacked=True)
+hits.plot.bar(stacked=True)
 plt.show()
